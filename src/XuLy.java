@@ -7,6 +7,7 @@ public class XuLy {
 	}
 
 	public static void main(String[] args) {
+		final int NUM_CHAR_PADD_LEFT = -70;
 		// TODO Auto-generated method stub
 		/*
 		  Bước 1: Khai báo biến nameMovie, priceTicketsAdults, priceTickersChild, numberAdultsSlot, numberChildSlot and ratioPercentSum, sumTurnover, sumTicker, percent,  
@@ -52,14 +53,25 @@ public class XuLy {
 		tuThien = ((1.0f)*phanTramTuThien)/100 * tongThu;
 		conLai = tongThu - tuThien;
 		
-		System.out.print("Tên phim: " + "\t" + tenPhim);
-		System.out.print("Số vé đã bán : " + "\t" + (soVeLon + soVeNho));
-		System.out.print("Doanh Thu: " + "\t" + tongThu);
-		System.out.print("Trích phần trăm từ thiện: " + "\t" + phanTramTuThien + "%");
-		System.out.print("Tổng tiền trích từ thiện: " + "\t" + tuThien);
-		System.out.print("Tổng tiền sau khi từ thiện: " + "\t" + conLai);
+		String text; 
+		text = String.format("%1$" + NUM_CHAR_PADD_LEFT +"s","Tên-phim:").replace(' ','.').replace('-',' ');
+		System.out.println(text + tenPhim);
+		
+		text =String.format("%1$" + NUM_CHAR_PADD_LEFT +"s", "Số-vé-đã-bán:").replace(' ', '.').replace('-', ' ');
+		System.out.println(text + (soVeLon + soVeNho));
+		
+		text =String.format("%1$" + NUM_CHAR_PADD_LEFT +"s", "Doanh-thu:").replace(' ', '.').replace('-', ' ');
+		System.out.println(text + tongThu);
+		
+		text =String.format("%1$" + NUM_CHAR_PADD_LEFT +"s", "Trích-phần-trăm-từ-thiện:").replace(' ', '.').replace('-', ' ');
+		System.out.println(text + phanTramTuThien + "%");
+		
+		text =String.format("%1$" + NUM_CHAR_PADD_LEFT +"s", "Tổng-tiền-trích-từ-thiện:").replace(' ', '.').replace('-', ' ');
+		System.out.println(text + tuThien);
+		
+		text =String.format("%1$" + NUM_CHAR_PADD_LEFT +"s", "Tổng-tiền-sau-khi-từ-thiện:").replace(' ', '.').replace('-', ' ');
+		System.out.println(text + conLai);
 		
 		//Example data 3d,2d - 2,2 - tien:10d,10%,1d,9d
-		
 	}
 }
